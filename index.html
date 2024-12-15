@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Notes App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="sub-container1">
-            <img class="logo" src="" alt="Site Logo">
-            <div>
-                <ul class="nav-list">
-                    <li class="nav-items"><a href="" class="nav-links">Learn</a></li>
-                    <li class="nav-items"><a href="" class="nav-links">About</a></li>
-                    <li class="nav-items"><a href="" class="nav-links">Download</a></li>
-                    <li class="nav-items"><a href="" class="nav-links">Blog</a></li>
-                    <li class="nav-items"><a href="" class="nav-links">Docs</a></li>
-                    <li class="nav-items"><a href="" class="nav-links">Contribute</a></li>
-                    <li class="nav-items"><a href="" class="nav-links">Certification</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="sub-container2">
-
+    <!-- Position : Absolute; (To add new notes) -->
+    <div class="new-note-card hidden">
+        <div class="add-note-form">
+                <button class="save-add">SAVE NOTE</button>
+                <textarea id="note" name="note" rows="20" cols="50" placeholder="Add New Note Here..."></textarea>
+                <button class="cancel-add">Cancel</button>
         </div>
     </div>
-    
+
+    <!-- MAIN GRID HAVING EVERYTHING -->
+    <div class="grid">
+        <div class="title">
+            <h1>MY NOTES APP</h1>
+        </div>
+        <!-- Plus Icon -->
+        <div class="to-do">
+            <button id="add-task"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <!-- new notes added here -->
+        <div class="note-div hidden">
+            <div class="added-note">
+                <div class="config-btn">
+                    <button class="edit-note">Edit</button>
+                    <button class="delete-note">Delete</button>
+                </div>
+                <p class="note-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, laudantium sed natus veniam nisi accusamus adipisci tenetur amet odio, qui soluta modi exercitationem provident repellat temporibus magnam impedit cum culpa quaerat voluptatem architecto delectus omnis voluptates! Veniam, neque alias. Quidem!</p>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            &copy;CopyRight&trade; 2024
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
